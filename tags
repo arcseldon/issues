@@ -65,6 +65,7 @@ TIMEOUT	deps/hackney/src/hackney_http_connect.erl	/^-define(TIMEOUT, infinity).$
 TIMEOUT	deps/hackney/src/hackney_socks5.erl	/^-define(TIMEOUT, infinity).$/;"	d
 TMAX	deps/idna/src/punycode.erl	/^-define(TMAX, 26).$/;"	d
 TMIN	deps/idna/src/punycode.erl	/^-define(TMIN, 1).$/;"	d
+TableFormatter	lib/issues/table_formatter.ex	/^defmodule Issues.TableFormatter do$/;"	m
 WITHOUT_ECC_CIPHERS	deps/hackney/src/hackney_ssl.erl	/^-define(WITHOUT_ECC_CIPHERS,$/;"	d
 __deriving__	deps/poison/lib/poison/encoder.ex	/^  defmacro __deriving__(module, struct, options) do$/;"	a
 __using__	deps/httpoison/lib/httpoison/base.ex	/^  defmacro __using__(_) do$/;"	a
@@ -5125,6 +5126,7 @@ fix_path	deps/hackney/src/hackney_url.erl	/^fix_path(Path) ->$/;"	f	module:hackn
 fix_path	deps/hackney/src/hackney_url.erl	/^fix_path(Path) when is_list(Path) ->$/;"	f	module:hackney_url
 fold	deps/hackney/src/hackney_headers.erl	/^fold(Fun, Acc0, Headers) ->$/;"	f	module:hackney_headers
 fold	deps/hackney/src/hackney_headers_new.erl	/^fold(Fun, Acc, {_, Headers}) ->$/;"	f	module:hackney_headers_new
+format_for	lib/issues/table_formatter.ex	/^  def format_for(column_widths) do$/;"	f
 format_timestamp	deps/hackney/src/hackney_trace.erl	/^format_timestamp({_N1, _N2, N3} = Now) ->$/;"	f	module:hackney_trace
 from_ascii	deps/idna/src/idna.erl	/^from_ascii(Domain) ->$/;"	f	module:idna
 from_ascii	deps/idna/src/idna.erl	/^from_ascii([Label|Labels], Acc) ->$/;"	f	module:idna
@@ -9673,8 +9675,11 @@ print_hackney_trace	deps/hackney/src/hackney_trace.erl	/^print_hackney_trace(Fd,
 print_hackney_trace	deps/hackney/src/hackney_trace.erl	/^print_hackney_trace({Service, Fd},$/;"	f	module:hackney_trace
 print_hackney_trace	deps/hackney/src/hackney_trace.erl	/^print_hackney_trace({ServiceA, Fd},$/;"	f	module:hackney_trace
 print_hackney_trace	deps/hackney/src/hackney_trace.erl	/^print_hackney_trace({ServiceA, _Fd},$/;"	f	module:hackney_trace
+print_table_for_columns	lib/issues/table_formatter.ex	/^  def print_table_for_columns(rows, headers) do$/;"	f
 print_trace	deps/hackney/src/hackney_trace.erl	/^print_trace(Fd, Event) ->$/;"	f	module:hackney_trace
 print_trace	deps/hackney/src/hackney_trace.erl	/^print_trace({_, Fd}, Event) ->$/;"	f	module:hackney_trace
+printable	lib/issues/table_formatter.ex	/^  def printable(str) when is_binary(str), do: str$/;"	f
+printable	lib/issues/table_formatter.ex	/^  def printable(str), do: to_string(str)$/;"	f
 privdir	deps/hackney/src/hackney_util.erl	/^privdir() ->$/;"	f	module:hackney_util
 process	deps/hackney/src/hackney_stream.erl	/^process(Error, _Client) ->$/;"	f	module:hackney_stream
 process	deps/hackney/src/hackney_stream.erl	/^process(done, Client) ->$/;"	f	module:hackney_stream
@@ -9712,6 +9717,8 @@ project	mix.exs	/^  def project do$/;"	f
 punycode	deps/idna/src/punycode.erl	/^-module(punycode).$/;"	m
 put	deps/httpoison/lib/httpoison/base.ex	/^      def put(url, body \\\\ "", headers \\\\ [], options \\\\ []),    do: request(:put, url, body, headers, options)$/;"	f
 put!	deps/httpoison/lib/httpoison/base.ex	/^      def put!(url, body \\\\ "", headers \\\\ [], options \\\\ []),   do: request!(:put, url, body, headers, options)$/;"	f
+puts_in_columns	lib/issues/table_formatter.ex	/^  def puts_in_columns(data_by_columns, format) do$/;"	f
+puts_one_line_in_columns	lib/issues/table_formatter.ex	/^  def puts_one_line_in_columns(fields, format) do$/;"	f
 qparam	deps/hackney/src/hackney_headers.erl	/^qparam(<< Q, $=, Data\/binary >>, Fun) when Q =:= $q; Q =:= $Q ->$/;"	f	module:hackney_headers
 qs	deps/hackney/src/hackney_url.erl	/^qs(KVs) ->$/;"	f	module:hackney_url
 qs	deps/hackney/src/hackney_url.erl	/^qs(KVs, Opts) ->$/;"	f	module:hackney_url
@@ -9828,6 +9835,7 @@ sendfile	deps/hackney/src/hackney_request.erl	/^sendfile(FileName, Opts, Client)
 sendfile_fallback	deps/hackney/src/hackney_request.erl	/^sendfile_fallback(Fd, Bytes, ChunkSize, #client{send_fun=Send}=Client, Sent)$/;"	f	module:hackney_request
 sendfile_fallback	deps/hackney/src/hackney_request.erl	/^sendfile_fallback(Fd, Opts, Client) ->$/;"	f	module:hackney_request
 sendfile_fallback	deps/hackney/src/hackney_request.erl	/^sendfile_fallback(_, _, _, _, Sent) ->$/;"	f	module:hackney_request
+separator	lib/issues/table_formatter.ex	/^  def separator(column_widths) do$/;"	f
 seq	deps/poison/lib/poison/encoder.ex	/^  defp seq(char) do$/;"	f
 set_level	deps/hackney/src/hackney_trace.erl	/^set_level(Level) ->$/;"	f	module:hackney_trace
 set_max_connections	deps/hackney/src/hackney_pool.erl	/^set_max_connections(Name, NewSize) ->$/;"	f	module:hackney_pool
@@ -9869,6 +9877,7 @@ sort_into_ascending_order	lib/issues/cli.ex	/^  def sort_into_ascending_order(li
 spaces	deps/poison/lib/poison/encoder.ex	/^      defp spaces(count) do$/;"	f
 spec_version	deps/unicode_util_compat/src/unicode_util_compat.erl	/^spec_version() -> unicode_util:spec_version().$/;"	f	module:unicode_util_compat
 spec_version	deps/unicode_util_compat/src/unicode_util_compat.erl	/^spec_version() -> {9,0}.$/;"	f	module:unicode_util_compat
+split_into_columns	lib/issues/table_formatter.ex	/^  def split_into_columns(rows, headers) do$/;"	f
 ssl_opts	deps/hackney/src/hackney_connect.erl	/^ssl_opts(Host, Options) ->$/;"	f	module:hackney_connect
 ssl_verify_fingerprint	deps/ssl_verify_fun/src/ssl_verify_fingerprint.erl	/^-module(ssl_verify_fingerprint).$/;"	m
 ssl_verify_hostname	deps/ssl_verify_fun/src/ssl_verify_hostname.erl	/^-module(ssl_verify_hostname).$/;"	m
@@ -16684,6 +16693,7 @@ whitespace	deps/hackney/src/hackney_bstr.erl	/^whitespace(<< C, Rest\/binary >>,
 whitespace	deps/hackney/src/hackney_bstr.erl	/^whitespace(Data, Fun) ->$/;"	f	module:hackney_bstr
 whitespace	deps/unicode_util_compat/src/unicode_util_compat.erl	/^whitespace() -> [[13,10],9,10,11,12,13,32,133,8206,8207,8232,8233].$/;"	f	module:unicode_util_compat
 whitespace	deps/unicode_util_compat/src/unicode_util_compat.erl	/^whitespace() -> unicode_util:whitespace().$/;"	f	module:unicode_util_compat
+widths_of	lib/issues/table_formatter.ex	/^  def widths_of(columns) do$/;"	f
 wildcard_not_in_a_label	deps/ssl_verify_fun/src/ssl_verify_hostname.erl	/^wildcard_not_in_a_label(BeforeW, AfterWString) ->$/;"	f	module:ssl_verify_hostname
 with_async_response_pid	deps/hackney/src/hackney_manager.erl	/^with_async_response_pid(Ref, Fun) ->$/;"	f	module:hackney_manager
 wkday	deps/hackney/src/hackney_date.erl	/^wkday(<< WkDay:3\/binary, Rest\/binary >>, Fun)$/;"	f	module:hackney_date
